@@ -1,1 +1,2 @@
 dds-cloudapi-sdk==0.2.1
+gradio==4.22.0

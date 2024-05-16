@@ -1,23 +1,38 @@
-# Grounding DINO 1.5
+<h1 align="center">Grounding DINO 1.5</h2>
 
-**[IDEA CVR, IDEA Research](https://github.com/IDEA-Research)** 
+<div align=center>
 
-**IDEA Research's Most Capable Open-World Object Detection Model Series.** The project provides **examples** for using the models, which are hosted on [DeepDataSpace](https://deepdataspace.com/home).
+  **IDEA Research's Most Capable Open-World Object Detection Model Series.** 
+  The project provides **examples** for using the models, which are hosted on [DeepDataSpace](https://deepdataspace.com/home).
 
-[[`Paper`]()] [[`Blog`]()] [[`Demo`]()] [[`BibTex`](#bibtex)]
+  **[IDEA-CVR, IDEA-Research](https://github.com/IDEA-Research)** 
+
+</div>
+
+<div align=center>
+
+[![arXiv preprint](https://img.shields.io/badge/arxiv_2403.14610-blue%3Flog%3Darxiv)](https://arxiv.org/pdf/2403.14610.pdf)   [![Homepage](https://img.shields.io/badge/homepage-visit-blue)](https://deepdataspace.com/home) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FIDEA-Research%2FGrounding-DINO-1.5-API&count_bg=%2390E1ED&title_bg=%23EB7373&icon=&icon_color=%23E9BABA&title=VISITORS&edge_flat=true)](https://hits.seeyoufarm.com) [![Static Badge](https://img.shields.io/badge/Try_Demo!-blue?logo=chainguard&logoColor=green)](https://deepdataspace.com/playground/grounding_dino)
+</div>
+
+[![Video Name](asset/video_cover.jpg)](https://github.com/Mountchicken/DeepStudio/assets/65173622/7f5fcb50-b41d-4a0f-b07e-0dfbf3f1118b)
 
 
 ## Contents
-- [Introduction](#introduction)
-- [Model Framework](#model-framework)
-- [Performance](#performance)
-  - [Side-by-Side Performance Comparison with Grounding DINO](#side-by-side-performance-comparison-with-grounding-dino)
-  - [Zero-Shot Transfer Performance of Grounding DINO 1.5 Pro](#zero-shot-transfer-results-of-grounding-dino-15-pro)
-  - [Fine-tuning Performance on Downstream Datasets](#fine-tuning-results-on-downstream-datasets)
-- [API Usage](#api-usage)
-- [Case Analysis and Qualitative Visualization](#case-analysis-and-qualitative-visualization)
-- [Related Work](#related-project)
-- [BibTeX](#bibtex)
+- [Grounding DINO 1.5](#grounding-dino-15)
+  - [Contents](#contents)
+  - [Introduction](#introduction)
+  - [Model Framework](#model-framework)
+  - [Performance](#performance)
+    - [Side-by-Side Performance Comparison with Grounding DINO](#side-by-side-performance-comparison-with-grounding-dino)
+    - [Zero-Shot Transfer Results of Grounding DINO 1.5 Pro](#zero-shot-transfer-results-of-grounding-dino-15-pro)
+    - [Fine-tuning Results on Downstream Datasets](#fine-tuning-results-on-downstream-datasets)
+  - [API Usage](#api-usage)
+    - [1. Installation](#1-installation)
+    - [2. Request API from DeepDataSpace](#2-request-api-from-deepdataspace)
+    - [3. Runing demo code](#3-runing-demo-code)
+    - [4. Online Grdio demo](#4-online-grdio-demo)
+  - [Related Work](#related-work)
+  - [BibTeX](#bibtex)
 
 ## Introduction
 
@@ -188,7 +203,7 @@ Grounding DINO 1.5 Pro preserves the core architecture of Grounding DINO which e
 ### 1. Installation
 
 ```bash
-pip install dds-cloudapi-sdk
+pip install -v -e .
 ```
 
 ### 2. Request API from DeepDataSpace
@@ -196,14 +211,16 @@ pip install dds-cloudapi-sdk
 Refer to the DeepDataSpace for API keys: https://deepdataspace.com/request_api
 
 
-### 3. Runing demo
+### 3. Runing demo code
 
 ```bash
-export DDS_API="your_api"
-python demo/demo.py
+python demo/demo.py --token <API_TOKEN>
 ```
 
-## Case Analysis and Qualitative Visualization
+### 4. Online Grdio demo
+```bash
+python gradio_app.py --token <API_TOKEN>
+```
 
 ## Related Work
 - [Grounding DINO](https://github.com/IDEA-Research/GroundingDINO): Strong open-set object detection model.
