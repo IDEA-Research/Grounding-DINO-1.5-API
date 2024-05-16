@@ -153,6 +153,24 @@ Grounding DINO 1.5 Pro preserves the core architecture of Grounding DINO which e
 </thead>
 <tbody align="center">
   <tr>
+    <td>GLIPv2</td>
+    <td>59.8</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td> - </td>
+    <td> 70.4 </td>
+  </tr>
+  <tr>
+    <td>OWL-ST + FT †</td>
+    <td>54.4</td>
+    <td>46.1</td>
+    <td>49.4</td>
+    <td>44.6</td>
+    <td> - </td>
+    <td> - </td>
+  </tr>
+  <tr>
     <td>DetCLIPv2</td>
     <td>58.3</td>
     <td>60.1</td>
