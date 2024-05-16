@@ -34,6 +34,7 @@
     - [4. Online Grdio demo](#4-online-grdio-demo)
   - [Case Analysis and Qualitative Visualization](#case)
   - [Related Work](#related-work)
+  - [LICENSE](#license)
   - [BibTeX](#bibtex)
 
 ## Introduction
