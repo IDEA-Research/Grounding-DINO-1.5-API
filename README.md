@@ -3,6 +3,7 @@
 <div align=center>
 
   **IDEA Research's Most Capable Open-World Object Detection Model Series.** 
+
   The project provides **examples** for using the models, which are hosted on [DeepDataSpace](https://deepdataspace.com/home).
 
   **[IDEA-CVR, IDEA-Research](https://github.com/IDEA-Research)** 
@@ -31,6 +32,7 @@
     - [2. Request API from DeepDataSpace](#2-request-api-from-deepdataspace)
     - [3. Runing demo code](#3-runing-demo-code)
     - [4. Online Grdio demo](#4-online-grdio-demo)
+  - [Case Analysis and Qualitative Visualization](#case)
   - [Related Work](#related-work)
   - [BibTeX](#bibtex)
 
@@ -221,6 +223,99 @@ python demo/demo.py --token <API_TOKEN>
 ```bash
 python gradio_app.py --token <API_TOKEN>
 ```
+
+## Case Analysis and Qualitative Visualization
+
+<details close>
+<summary> <b> Common Object Detection </b> </summary>
+
+<div align="center">
+  <img src="./asset/qualitative_visualization/common_object_vis.png" width="100%">
+</div>
+
+<div align="center">
+  <img src="./asset/qualitative_visualization/common_object_vis2.png" width="100%">
+</div>
+
+</details>
+
+<p></p>
+
+<details close>
+<summary> <b> Long-tailed Object Detection </b> </summary>
+
+<div align="center">
+  <img src="./asset/qualitative_visualization/longtail_object_vis.png" width="100%">
+</div>
+
+</details>
+
+<p></p>
+
+<details close>
+<summary> <b> Short Caption Grounding </b> </summary>
+
+<div align="center">
+  <img src="./asset/qualitative_visualization/short_caption_vis.png" width="100%">
+</div>
+
+</details>
+
+<p></p>
+
+<details close>
+<summary> <b> Long Caption Grounding </b> </summary>
+
+<div align="center">
+  <img src="./asset/qualitative_visualization/long_caption_vis.png" width="100%">
+</div>
+
+<div align="center">
+  <img src="./asset/qualitative_visualization/long_caption_vis2.png" width="100%">
+</div>
+
+<div align="center">
+  <img src="./asset/qualitative_visualization/long_caption_vis3.png" width="100%">
+</div>
+
+</details>
+
+<p></p>
+
+<details close>
+<summary> <b> Dense Object Detection </b> </summary>
+
+<div align="center">
+  <img src="./asset/qualitative_visualization/dense_object_vis.png" width="100%">
+</div>
+
+<div align="center">
+  <img src="./asset/qualitative_visualization/dense_object_vis2.png" width="100%">
+</div>
+
+</details>
+
+<p></p>
+
+<details close>
+<summary> <b> Video Object Detection </b> </summary>
+
+<div align="center">
+  <img src="./asset/qualitative_visualization/video_object_vis.png" width="100%">
+</div>
+
+</details>
+
+<p></p>
+
+<details close>
+<summary> <b> Advanced Object Detection on Edge Devices </b> </summary>
+
+<div align="center">
+  <img src="./asset/qualitative_visualization/edge_vis.png" width="100%">
+</div>
+
+</details>
 
 ## Related Work
 - [Grounding DINO](https://github.com/IDEA-Research/GroundingDINO): Strong open-set object detection model.
