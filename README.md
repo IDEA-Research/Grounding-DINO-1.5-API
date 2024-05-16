@@ -1,25 +1,187 @@
-# Grounding DINO 1.5 API
+# Grounding DINO 1.5
 
-Grounding DINO 1.5 is our most powerful open-world object detection model series. The project provides **examples** for using the models, which are hosted on [DeepDataSpace](https://deepdataspace.com/home).
+**[IDEA-CVR, IDEA-Research](https://github.com/IDEA-Research)** 
 
+**IDEA Research's Most Capable Open-World Object Detection Model Series.** The project provides **examples** for using the models, which are hosted on [DeepDataSpace](https://deepdataspace.com/home).
 
-We provide Grounding DINO 1.5 with two models for different scenarios:
-
-- **Grounding DINO 1.5 Pro** — our most capable model for open-set object detection. It encompasses a wide range of detection scenarios, including but not limited to long-tailed object detection, dense object detection, and long caption phrase grounding, etc.
-
-- **Grounding DINO 1.5 Edge** — our most efficient model for edge computing scenarios. It strives for fast and reliable detection while maintaining low latency and reduced power consumption.
+[[`Paper`]()] [[`Blog`]()] [[`Demo`]()] [[`BibTex`](#bibtex)]
 
 
-## State-of-the-Art Zero-Shot Transfer Performance
+## Contents
+- [Introduction](#introduction)
+- [Model Framework](#model-framework)
+- [Performance](#performance)
+  - [Zero-Shot Transfer Performance of Grounding DINO 1.5 Pro](#zero-shot-transfer-results-of-grounding-dino-15-pro)
+  - [Fine-tuning Performance on Downstream Datasets](#fine-tuning-results-on-downstream-datasets)
+- [API Usage](#api-usage)
+- [Related Work](#related-project)
+- [BibTeX](#bibtex)
 
-Grounding DINO 1.5 sets new records on several academic benchmarks. Grounding DINO 1.5 Pro achieves a 54.3 AP on the COCO detection zero-shot transfer benchmark and simultaneously achieves a 55.7 AP and a 47.6 AP on the LVIS-minival and LVIS-val zero-shot transfer benchmarks, respectively. We compare the zero-shot performance of Grounding DINO 1.5 Pro and Grounding DINO in Figure 1. 
+## Introduction
 
-![alt text](asset/zeroshot.png)
+We introduce Grounding DINO 1.5, a suite of advanced open-set object detection models developed by [IDEA Research](https://github.com/IDEA-Research), which aims to advanced the "Edge" of open-set object detection. The suite encompasses two models:
 
-## Usage
+- **Grounding DINO 1.5 Pro:** Our most **capable** model for open-set object detection, which is designed for stronger generalization capability across a wide range of scenarios.
+
+- **Grounding DINO 1.5 Edge:** Our most **efficient** model for edge computing scenarios, which is optimized for faster speed demanded in many applications requiring edge deployment.
+
+<p align="left"><em>Note: We use "edge" for its dual meaning both as in <b>pushing the boundaries</b> and as in <b>running on edge devices</b>.</em></p>
 
 
-### 1. Install
+## Model Framework
+
+The overall framework of Grounding DINO 1.5 is as the following image:
+
+<div align="center">
+  <img src="./asset/gd1.5_overall_framework.png" width="80%">
+</div>
+
+Grounding DINO 1.5 Pro preserves the core architecture of Grounding DINO which employs a deep early fusion architecture.
+
+## Performance
+
+<div align="center">
+  <img src="./asset/zeroshot.png" width="80%">
+</div>
+
+### Zero-Shot Transfer Results of Grounding DINO 1.5 Pro
+
+<table align="center">
+<thead>
+  <tr>
+    <th>Model</th>
+    <th>COCO <br><sup><sup>(AP box)</sup></sup></th>
+    <th>LVIS-minival <br><sup><sup>(AP all)</sup></sup></th>
+    <th>LVIS-minival <br><sup><sup>(AP rare)</sup></sup></th>
+    <th>LVIS-val <br><sup><sup>(AP all)</sup></sup></th>
+    <th>LVIS-val <br><sup><sup>(AP rare)</sup></sup></th>
+    <th>ODinW35 <br><sup><sup>(AP avg)</sup></sup></th>
+    <th>ODinW13 <br><sup><sup>(AP avg)</sup></sup></th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td>Other Best<br>Open-Set Model</td>
+    <td>53.4<br><sup><sup>(OmDet-Turbo)</sup></sup></td>
+    <td>47.6<br><sup><sup>(T-Rex2 visual)</sup></sup></td>
+    <td>45.4<br><sup><sup>(T-Rex2 visual)</sup></sup></td>
+    <td>45.3<br><sup><sup>(T-Rex2 visual)</sup></sup></td>
+    <td>43.8<br><sup><sup>(T-Rex2 visual)</sup></sup></td>
+    <td>30.1<br><sup><sup>(OmDet-Turbo)</sup></sup></td>
+    <td><b>59.8</b><br><sup><sup>(APE-B)</sup></sup></td>
+  </tr>
+  <tr>
+    <td>DetCLIPv3</td>
+    <td> - </td>
+    <td>48.8</td>
+    <td>49.9</td>
+    <td>41.4</td>
+    <td>41.4</td>
+    <td> - </td>
+    <td> - </td>
+  </tr>
+  <tr>
+    <td>Grounding DINO</td>
+    <td>52.5</td>
+    <td>27.4</td>
+    <td>18.1</td>
+    <td> - </td>
+    <td> - </td>
+    <td> 26.1 </td>
+    <td> 56.9 </td>
+  </tr>
+  <tr>
+    <td>T-Rex2 (text)</td>
+    <td>52.2</td>
+    <td>54.9</td>
+    <td>49.2</td>
+    <td> 45.8 </td>
+    <td> 42.7 </td>
+    <td> 22.0 </td>
+    <td> - </td>
+  </tr>
+  <tr>
+    <td><b>Grounding DINO 1.5 Pro</b></td>
+    <td><b>54.3</b></td>
+    <td><b>55.7</b></td>
+    <td><b>56.1</b></td>
+    <td><b>47.6</b></td>
+    <td><b>44.6</b></td>
+    <td><b>30.2</b></td>
+    <td>58.7</td>
+  </tr>
+</tbody>
+</table>
+
+- Grounding DINO 1.5 Pro achieves **SOTA** performance on COCO, LVIS-minival, LVIS-val, and ODinW35 **zero-shot** transfer benchmarks.
+
+### Fine-tuning Results on Downstream Datasets
+
+<table align="center">
+<thead>
+  <tr>
+    <th>Model</th>
+    <th>LVIS-minival <br><sup><sup>(AP all)</sup></sup></th>
+    <th>LVIS-minival <br><sup><sup>(AP rare)</sup></sup></th>
+    <th>LVIS-val <br><sup><sup>(AP all)</sup></sup></th>
+    <th>LVIS-val <br><sup><sup>(AP rare)</sup></sup></th>
+    <th>ODinW35 <br><sup><sup>(AP avg)</sup></sup></th>
+    <th>ODinW13 <br><sup><sup>(AP avg)</sup></sup></th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td>DetCLIPv2</td>
+    <td>58.3</td>
+    <td>60.1</td>
+    <td>53.1</td>
+    <td> 49.0 </td>
+    <td> - </td>
+    <td> 70.4 </td>
+  </tr>
+  <tr>
+    <td>DetCLIPv3</td>
+    <td> - </td>
+    <td>60.5</td>
+    <td>60.7</td>
+    <td>-</td>
+    <td>-</td>
+    <td> 72.1 </td>
+  </tr>
+  <tr>
+    <td>DetCLIPv3 †</td>
+    <td>60.8</td>
+    <td>56.7</td>
+    <td>54.1</td>
+    <td>45.8</td>
+    <td> - </td>
+    <td> - </td>
+  </tr>
+  <tr>
+    <td>Grounding DINO 1.5 Pro (zero-shot)</td>
+    <td>55.7</td>
+    <td>56.1</td>
+    <td>47.6</td>
+    <td>44.6</td>
+    <td>30.2</td>
+    <td>58.7</td>
+  </tr>
+  <tr>
+    <td><b>Grounding DINO 1.5 Pro</b></td>
+    <td><b>68.1</b></td>
+    <td><b>68.7</b></td>
+    <td><b>63.5</b></td>
+    <td><b>64.0</b></td>
+    <td><b>70.6</b></td>
+    <td><b>72.4</b></td>
+  </tr>
+</tbody>
+</table>
+
+- † indicates results of fine-tuning with LVIS base categories only.
+
+## API Usage
+### 1. Installation
 
 ```bash
 pip install dds-cloudapi-sdk
@@ -38,8 +200,15 @@ python demo/demo.py
 ```
 
 
-## Related Project
-[Grounding DINO](https://github.com/IDEA-Research/GroundingDINO): A strongr open-set object detection model.
+## Related Work
+- [Grounding DINO](https://github.com/IDEA-Research/GroundingDINO): Strong open-set object detection model.
+- [Grounded-Segment-Anything](https://github.com/IDEA-Research/Grounded-Segment-Anything): Open-set detection and segmentation model by combining SAM with Grounding-DINO.
+- [T-Rex/T-Rex2](https://github.com/IDEA-Research/t-rex): Generic open-set detection model supporting both text and visual prompts.
 
-[T-Rex/T-Rex2](https://github.com/IDEA-Research/t-rex): supporting both text and visual prompts for open-set object detection.
+## BibTeX
 
+If you find our work helpful for your research, please consider citing the following BibTeX entry.
+
+```BibTeX
+
+```
