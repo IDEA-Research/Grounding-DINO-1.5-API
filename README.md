@@ -11,9 +11,11 @@
 - [Introduction](#introduction)
 - [Model Framework](#model-framework)
 - [Performance](#performance)
+  - [Side-by-Side Performance Comparison with Grounding DINO](#side-by-side-performance-comparison-with-grounding-dino)
   - [Zero-Shot Transfer Performance of Grounding DINO 1.5 Pro](#zero-shot-transfer-results-of-grounding-dino-15-pro)
   - [Fine-tuning Performance on Downstream Datasets](#fine-tuning-results-on-downstream-datasets)
 - [API Usage](#api-usage)
+- [Case Analysis and Qualitative Visualization](#case-analysis-and-qualitative-visualization)
 - [Related Work](#related-project)
 - [BibTeX](#bibtex)
 
@@ -39,6 +41,8 @@ The overall framework of Grounding DINO 1.5 is as the following image:
 Grounding DINO 1.5 Pro preserves the core architecture of Grounding DINO which employs a deep early fusion architecture.
 
 ## Performance
+
+### Side-by-Side Performance Comparison with Grounding DINO
 
 <div align="center">
   <img src="./asset/zeroshot.png" width="80%">
@@ -199,6 +203,7 @@ export DDS_API="your_api"
 python demo/demo.py
 ```
 
+## Case Analysis and Qualitative Visualization
 
 ## Related Work
 - [Grounding DINO](https://github.com/IDEA-Research/GroundingDINO): Strong open-set object detection model.
