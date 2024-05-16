@@ -15,27 +15,26 @@
 [![arXiv preprint](https://img.shields.io/badge/arxiv_2403.14610-blue%3Flog%3Darxiv)](https://arxiv.org/pdf/2403.14610.pdf)   [![Homepage](https://img.shields.io/badge/homepage-visit-blue)](https://deepdataspace.com/home) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FIDEA-Research%2FGrounding-DINO-1.5-API&count_bg=%2390E1ED&title_bg=%23EB7373&icon=&icon_color=%23E9BABA&title=VISITORS&edge_flat=true)](https://hits.seeyoufarm.com) [![Static Badge](https://img.shields.io/badge/Try_Demo!-blue?logo=chainguard&logoColor=green)](https://deepdataspace.com/playground/grounding_dino)
 </div>
 
-[![Video Name](asset/video_cover.jpg)](https://github.com/Mountchicken/DeepStudio/assets/65173622/7f5fcb50-b41d-4a0f-b07e-0dfbf3f1118b)
+[![Video Name](asset/video_cover.jpg)](https://github.com/Mountchicken/DeepStudio/assets/65173622/12add318-f849-4ac5-8035-f9e028cccbb5)
 
 
 ## Contents
-- [Grounding DINO 1.5](#grounding-dino-15)
-  - [Contents](#contents)
-  - [Introduction](#introduction)
-  - [Model Framework](#model-framework)
-  - [Performance](#performance)
-    - [Side-by-Side Performance Comparison with Grounding DINO](#side-by-side-performance-comparison-with-grounding-dino)
-    - [Zero-Shot Transfer Results of Grounding DINO 1.5 Pro](#zero-shot-transfer-results-of-grounding-dino-15-pro)
-    - [Fine-tuning Results on Downstream Datasets](#fine-tuning-results-on-downstream-datasets)
-  - [API Usage](#api-usage)
-    - [1. Installation](#1-installation)
-    - [2. Request API from DeepDataSpace](#2-request-api-from-deepdataspace)
-    - [3. Runing demo code](#3-runing-demo-code)
-    - [4. Online Grdio demo](#4-online-grdio-demo)
-  - [Case Analysis and Qualitative Visualization](#case)
-  - [Related Work](#related-work)
-  - [LICENSE](#license)
-  - [BibTeX](#bibtex)
+- [Contents](#contents)
+- [Introduction](#introduction)
+- [Model Framework](#model-framework)
+- [Performance](#performance)
+  - [Side-by-Side Performance Comparison with Grounding DINO](#side-by-side-performance-comparison-with-grounding-dino)
+  - [Zero-Shot Transfer Results of Grounding DINO 1.5 Pro](#zero-shot-transfer-results-of-grounding-dino-15-pro)
+  - [Fine-tuning Results on Downstream Datasets](#fine-tuning-results-on-downstream-datasets)
+- [API Usage](#api-usage)
+  - [1. Installation](#1-installation)
+  - [2. Request API from DeepDataSpace](#2-request-api-from-deepdataspace)
+  - [3. Runing demo code](#3-runing-demo-code)
+  - [4. Online Grdio demo](#4-online-grdio-demo)
+- [Case Analysis and Qualitative Visualization](#case-analysis-and-qualitative-visualization)
+- [Related Work](#related-work)
+- [LICENSE](#license)
+- [BibTeX](#bibtex)
 
 ## Introduction
 
