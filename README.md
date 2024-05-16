@@ -322,6 +322,21 @@ python gradio_app.py --token <API_TOKEN>
 - [Grounded-Segment-Anything](https://github.com/IDEA-Research/Grounded-Segment-Anything): Open-set detection and segmentation model by combining Grounding DINO with SAM.
 - [T-Rex/T-Rex2](https://github.com/IDEA-Research/t-rex): Generic open-set detection model supporting both text and visual prompts.
 
+## LICENSE
+
+<details close>
+<summary> <b> Grounding DINO 1.5 API License </b> </summary>
+
+Grounding DINO 1.5 is released under the Apache 2.0 license. Please see the [LICENSE](./LICENSE) file for more information.
+
+Copyright (c) IDEA. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use these files except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+</details>
+
 ## BibTeX
 
 If you find our work helpful for your research, please consider citing the following BibTeX entry.
