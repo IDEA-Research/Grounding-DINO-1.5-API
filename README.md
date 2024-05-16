@@ -1,6 +1,6 @@
 # Grounding DINO 1.5
 
-**[IDEA-CVR, IDEA-Research](https://github.com/IDEA-Research)** 
+**[IDEA CVR, IDEA Research](https://github.com/IDEA-Research)** 
 
 **IDEA Research's Most Capable Open-World Object Detection Model Series.** The project provides **examples** for using the models, which are hosted on [DeepDataSpace](https://deepdataspace.com/home).
 
@@ -207,7 +207,7 @@ python demo/demo.py
 
 ## Related Work
 - [Grounding DINO](https://github.com/IDEA-Research/GroundingDINO): Strong open-set object detection model.
-- [Grounded-Segment-Anything](https://github.com/IDEA-Research/Grounded-Segment-Anything): Open-set detection and segmentation model by combining SAM with Grounding-DINO.
+- [Grounded-Segment-Anything](https://github.com/IDEA-Research/Grounded-Segment-Anything): Open-set detection and segmentation model by combining Grounding DINO with SAM.
 - [T-Rex/T-Rex2](https://github.com/IDEA-Research/t-rex): Generic open-set detection model supporting both text and visual prompts.
 
 ## BibTeX
