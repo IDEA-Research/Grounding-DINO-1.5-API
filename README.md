@@ -12,7 +12,7 @@
 
 <div align=center>
 
-[![arXiv preprint](https://img.shields.io/badge/arxiv_2403.14610-blue%3Flog%3Darxiv)](https://arxiv.org/abs/2405.10300)   [![Homepage](https://img.shields.io/badge/homepage-visit-blue)](https://deepdataspace.com/home) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FIDEA-Research%2FGrounding-DINO-1.5-API&count_bg=%2390E1ED&title_bg=%23EB7373&icon=&icon_color=%23E9BABA&title=VISITORS&edge_flat=true)](https://hits.seeyoufarm.com) [![Static Badge](https://img.shields.io/badge/Try_Demo!-blue?logo=chainguard&logoColor=green)](https://deepdataspace.com/playground/grounding_dino)
+[![arXiv preprint](https://img.shields.io/badge/arxiv_2403.14610-blue%3Flog%3Darxiv)](https://arxiv.org/abs/2405.10300)   [![Homepage](https://img.shields.io/badge/homepage-visit-blue)](https://deepdataspace.com/home) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FIDEA-Research%2FGrounding-DINO-1.5-API&count_bg=%2390E1ED&title_bg=%23EB7373&icon=&icon_color=%23E9BABA&title=VISITORS&edge_flat=true)](https://hits.seeyoufarm.com) [![Static Badge](https://img.shields.io/badge/Try_Demo!-blue?logo=chainguard&logoColor=green)](https://deepdataspace.com/playground/grounding_dino) [![Gradio demo](https://img.shields.io/badge/%F0%9F%A4%97%20demo-Gradio-ff7c00)](https://huggingface.co/spaces/Mountchicken/Grounding-DINO-1.5)
 </div>
 
 [![Video Name](asset/video_cover.jpg)](https://github.com/Mountchicken/DeepStudio/assets/65173622/7c4278d4-6e74-4f94-a207-bfa0a4cfe2e4)
