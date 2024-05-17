@@ -360,5 +360,12 @@ Unless required by applicable law or agreed to in writing, software distributed 
 If you find our work helpful for your research, please consider citing the following BibTeX entry.
 
 ```BibTeX
-
+@misc{ren2024grounding,
+      title={Grounding DINO 1.5: Advance the "Edge" of Open-Set Object Detection}, 
+      author={Tianhe Ren and Qing Jiang and Shilong Liu and Zhaoyang Zeng and Wenlong Liu and Han Gao and Hongjie Huang and Zhengyu Ma and Xiaoke Jiang and Yihao Chen and Yuda Xiong and Hao Zhang and Feng Li and Peijun Tang and Kent Yu and Lei Zhang},
+      year={2024},
+      eprint={2405.10300},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
