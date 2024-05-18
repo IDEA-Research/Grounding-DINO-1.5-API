@@ -371,3 +371,23 @@ If you find our work helpful for your research, please consider citing the follo
       primaryClass={cs.CV}
 }
 ```
+
+```BibTeX
+@misc{jiang2024trex2,
+      title={T-Rex2: Towards Generic Object Detection via Text-Visual Prompt Synergy}, 
+      author={Qing Jiang and Feng Li and Zhaoyang Zeng and Tianhe Ren and Shilong Liu and Lei Zhang},
+      year={2024},
+      eprint={2403.14610},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
+```BibTeX
+@article{liu2023grounding,
+  title={Grounding dino: Marrying dino with grounded pre-training for open-set object detection},
+  author={Liu, Shilong and Zeng, Zhaoyang and Ren, Tianhe and Li, Feng and Zhang, Hao and Yang, Jie and Li, Chunyuan and Yang, Jianwei and Su, Hang and Zhu, Jun and others},
+  journal={arXiv preprint arXiv:2303.05499},
+  year={2023}
+}
+```
