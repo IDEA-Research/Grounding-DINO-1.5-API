@@ -164,7 +164,7 @@ Grounding DINO 1.5 Pro preserves the core architecture of Grounding DINO which e
   </tr>
   <tr>
     <td>GLEE-Pro</td>
-    <td>59.8</td>
+    <td>-</td>
     <td>-</td>
     <td>-</td>
     <td>-</td>
