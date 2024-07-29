@@ -12,15 +12,18 @@
 
 <div align=center>
 
-[![arXiv preprint](https://img.shields.io/badge/arxiv_2405.10300-blue%3Flog%3Darxiv)](https://arxiv.org/abs/2405.10300)   [![Homepage](https://img.shields.io/badge/homepage-visit-blue)](https://deepdataspace.com/home) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FIDEA-Research%2FGrounding-DINO-1.5-API&count_bg=%2390E1ED&title_bg=%23EB7373&icon=&icon_color=%23E9BABA&title=VISITORS&edge_flat=true)](https://hits.seeyoufarm.com) [![Static Badge](https://img.shields.io/badge/Try_Demo!-blue?logo=chainguard&logoColor=green)](https://deepdataspace.com/playground/grounding_dino) [![Gradio demo](https://img.shields.io/badge/%F0%9F%A4%97%20demo-Gradio-ff7c00)](https://huggingface.co/spaces/Mountchicken/Grounding-DINO-1.5)
+[![arXiv preprint](https://img.shields.io/badge/arxiv_2405.10300-blue%3Flog%3Darxiv)](https://arxiv.org/abs/2405.10300)   [![Homepage](https://img.shields.io/badge/homepage-visit-blue)](https://deepdataspace.com/home) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FIDEA-Research%2FGrounding-DINO-1.5-API&count_bg=%2390E1ED&title_bg=%23EB7373&icon=&icon_color=%23E9BABA&title=VISITORS&edge_flat=true)](https://hits.seeyoufarm.com) [![Static Badge](https://img.shields.io/badge/Try_Demo!-blue?logo=chainguard&logoColor=green)](https://deepdataspace.com/playground/grounding_dino)
 </div>
 
 ✨ **First-Time Application**: If you are interested in our project and wish to try our algorithm, you will need to apply for the corresponding API Token through our [request API token website](https://deepdataspace.com/request_api) for your first attempt.
 
 📌 **Request Additional Token Quotas**: If you find our project helpful and need more API token quotas, you can request additional tokens by [filling out this form](https://docs.google.com/forms/d/e/1FAIpQLSfjogAtkgoVyFX9wvCAE15mD7QtHdKdKOrVmcE5GT1xu-03Aw/viewform?usp=sf_link). Our team will review your request and allocate more tokens for your use in one or two days. You can also apply for more tokens by sending us an email.
 
-[![Video Name](asset/video_cover.jpg)](https://github.com/Mountchicken/MMOCR_tutorials/assets/65173622/1adb50af-8ebf-4e9c-aa45-b96267ea6622)
+🔥 **Grounding DINO 1.6 Release**: Grounding DINO 1.6 Pro establishes new SOTA results on zero-shot transfer benchmarks: **55.4 AP** on COCO , **57.7 AP** on LVIS-minival, and **51.1 AP** on LVIS-val. Moreover, it demonstrates significantly superior performance compared with the 1.5 Pro model in several specific detection scenarios, such as **Animal Detection**, **Text Detection**, etc. Please refer to our [Official Blog](https://www.deepdataspace.com/blog/Grounding-DINO-1.6-Pro) for more details about the 1.6 release.
 
+<!-- [![Video Name](asset/1.6pro_video.png)](https://github.com/Mountchicken/MMOCR_tutorials/assets/65173622/1adb50af-8ebf-4e9c-aa45-b96267ea6622) -->
+
+[![Video Name](asset/1.6pro_video.png)](https://github.com/user-attachments/assets/d19d8698-9f2c-41f8-9803-110b3cab23cf)
 
 ## Contents
 - [Contents](#contents)
@@ -28,7 +31,8 @@
 - [Model Framework](#model-framework)
 - [Performance](#performance)
   - [Side-by-Side Performance Comparison with Grounding DINO](#side-by-side-performance-comparison-with-grounding-dino)
-  - [Zero-Shot Transfer Results of Grounding DINO 1.5 Pro](#zero-shot-transfer-results-of-grounding-dino-15-pro)
+  - [Zero-Shot Transfer Results of Grounding DINO 1.5 & 1.6 Pro](#zero-shot-transfer-results-of-grounding-dino-15--16-pro)
+  - [Few-Shot Transfer Results of Grounding DINO 1.5 Pro](#grounding-dino-15-as-a-strong-few-shot-learner)
   - [Fine-tuning Results on Downstream Datasets](#fine-tuning-results-on-downstream-datasets)
 - [API Usage](#api-usage)
   - [1. Installation](#1-installation)
@@ -66,10 +70,19 @@ Grounding DINO 1.5 Pro preserves the core architecture of Grounding DINO which e
 ### Side-by-Side Performance Comparison with Grounding DINO
 
 <div align="center">
+  <img src="./asset/zero_shot_1.6_pro.png" width="100%">
+</div>
+
+<details close>
+<summary> <b> Grounding DINO 1.5 Pro vs Grounding DINO </b> </summary>
+
+<div align="center">
   <img src="./asset/zeroshot.png" width="80%">
 </div>
 
-### Zero-Shot Transfer Results of Grounding DINO 1.5 Pro
+</details>
+
+### Zero-Shot Transfer Results of Grounding DINO 1.5 & 1.6 Pro
 
 <table align="center">
 <thead>
@@ -126,19 +139,116 @@ Grounding DINO 1.5 Pro preserves the core architecture of Grounding DINO which e
     <td> - </td>
   </tr>
   <tr>
-    <td><b>Grounding DINO 1.5 Pro</b></td>
-    <td><b>54.3</b></td>
-    <td><b>55.7</b></td>
-    <td><b>56.1</b></td>
-    <td><b>47.6</b></td>
-    <td><b>44.6</b></td>
+    <td>Grounding DINO 1.5 Pro</td>
+    <td>54.3</td>
+    <td>55.7</td>
+    <td>56.1</td>
+    <td>47.6</td>
+    <td>44.6</td>
     <td><b>30.2</b></td>
     <td>58.7</td>
+  </tr>
+  <tr>
+    <td><b>Grounding DINO 1.6 Pro</b></td>
+    <td><b>55.4</b></td>
+    <td><b>57.7</b></td>
+    <td><b>57.5</b></td>
+    <td><b>51.1</b></td>
+    <td><b>51.5</b></td>
+    <td>-</td>
+    <td>-</td>
   </tr>
 </tbody>
 </table>
 
 - Grounding DINO 1.5 Pro achieves **SOTA** performance on COCO, LVIS-minival, LVIS-val, and ODinW35 **zero-shot** transfer benchmarks.
+- Grounding DINO 1.6 Pro has significantly improved the model's performance on the COCO, LVIS zero-shot transfer benchmarks, particularly in the LVIS-rare classes.
+
+### Grounding DINO 1.5 as a Strong Few-Shot Learner
+
+We validate the transferability of Grounding DINO 1.5 Pro on ODinW few-shot benchmarks and Grounding DINO 1.5 Pro has achieved new **SOTA** results on the ODinW few-shot setting.
+
+<table align="center">
+<thead>
+  <tr>
+    <th>Model</th>
+    <th>Tune</sup></sup></th>
+    <th>1-Shot</th>
+    <th>3-Shot</th>
+    <th>5-Shot</th>
+    <th>10-Shot</th>
+    <th>All</th>
+  </tr>
+</thead>
+<tbody align="center">
+  <tr>
+    <td>DyHead (COCO)</td>
+    <td> Full </td>
+    <td>31.9 ± 1.3</td>
+    <td>44.2 ± 0.3</td>
+    <td>44.7 ± 1.7</td>
+    <td>50.1 ± 1.6</td>
+    <td> 63.2 </td>
+  </tr>
+  <tr>
+    <td>DyHead (O365)</td>
+    <td> Full </td>
+    <td>33.8 ± 3.5</td>
+    <td>43.6 ± 1.0</td>
+    <td>46.4 ± 1.1</td>
+    <td>50.8 ± 1.3</td>
+    <td> 60.8 </td>
+  </tr>
+  <tr>
+    <td>GLIP-L</td>
+    <td> Full </td>
+    <td>59.9 ± 1.4</td>
+    <td>62.1 ± 0.7</td>
+    <td>64.2 ± 0.3</td>
+    <td>64.9 ± 0.7</td>
+    <td> 68.9 </td>
+  </tr>
+  <tr>
+    <td>GLIPv2-H</td>
+    <td> Full </td>
+    <td>61.7 ± 0.5</td>
+    <td>64.1 ± 0.8</td>
+    <td>64.4 ± 0.6</td>
+    <td>65.9 ± 0.3</td>
+    <td> 70.4 </td>
+  </tr>
+  <tr>
+    <td>GLEE-Pro</td>
+    <td> Full </td>
+    <td>59.4 ± 1.5</td>
+    <td>61.7 ± 0.5</td>
+    <td>64.3 ± 1.3</td>
+    <td>65.6 ± 0.4</td>
+    <td> 69.0 </td>
+  </tr>
+  <tr>
+    <td>MQ-GLIP-L</td>
+    <td>Full</td>
+    <td><b>62.4</b></td>
+    <td>64.2</td>
+    <td>65.4</td>
+    <td>66.6</td>
+    <td>71.3</td>
+  </tr>
+  <tr>
+    <td>Grounding DINO 1.5 Pro</td>
+    <td>Full</td>
+    <td><b>62.4</b> ± 1.1</td>
+    <td><b>66.3</b> ± 1.0</td>
+    <td><b>66.9</b> ± 0.2</td>
+    <td><b>67.9</b> ± 0.3</td>
+    <td> <b>72.4</b> </td>
+  </tr>
+</tbody>
+</table>
+
+- "Full" means fine-tuning the full model.
+- Follow GLIP, for each few-shot setting, we train the models three times using different random seeds for train/validation splits.
 
 ### Fine-tuning Results on Downstream Datasets
 
