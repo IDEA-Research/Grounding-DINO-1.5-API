@@ -38,7 +38,7 @@
   - [1. Installation](#1-installation)
   - [2. Request API from DeepDataSpace](#2-request-api-from-deepdataspace)
   - [3. Runing demo code](#3-runing-demo-code)
-  - [4. Online Grdio demo](#4-online-grdio-demo)
+  - [4. Online Gradio demo](#4-online-gradio-demo)
 - [Case Analysis and Qualitative Visualization](#case-analysis-and-qualitative-visualization)
 - [Related Work](#related-work)
 - [LICENSE](#license)
@@ -369,7 +369,7 @@ Refer to the DeepDataSpace for API keys: https://deepdataspace.com/request_api
 python demo/demo.py --token <API_TOKEN>
 ```
 
-### 4. Online Grdio demo
+### 4. Online Gradio demo
 ```bash
 python gradio_app.py --token <API_TOKEN>
 ```
