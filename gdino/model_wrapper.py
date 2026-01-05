@@ -135,7 +135,7 @@ class GroundingDINOAPIWrapper:
                 rsp = self.client.upload_file(tmp_file_path)
                 print(f"Status code: {rsp.status_code}")
                 print(f"Response text: {rsp.text}")  # 打印返回的响应文本
-                assert rsp.status_code == 200  # 确保返回的是200
+                assert rsp.status_code == 200, f"上传文件失败，状态码: {rsp.status_code}, 响应内容: {rsp.text}"
         
                 url = rsp.text  # 假设返回的是文本，保存响应内容为 URL
 
