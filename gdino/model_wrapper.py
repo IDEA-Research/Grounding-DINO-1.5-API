@@ -120,13 +120,23 @@ class GroundingDINOAPIWrapper:
         Returns:
             str: The url of the image
         """
-        if isinstance(image, str):
+        if isinstance(image, str): 
+            # 如果 image 是文件路径
             url = self.client.upload_file(image)
         else:
+            # 如果 image 是 numpy 数组，转换为 PNG 格式
             with tempfile.NamedTemporaryFile(delete=True, suffix=".png") as tmp_file:
-                # image is in numpy format, convert to PIL Image
+                # image 是 numpy 格式，转换为 PIL 图像
                 image = Image.fromarray(image)
                 image.save(tmp_file, format="PNG")
                 tmp_file_path = tmp_file.name
-                url = self.client.upload_file(tmp_file_path)
+        
+                # 上传文件并打印响应信息
+                rsp = self.client.upload_file(tmp_file_path)
+                print(f"Status code: {rsp.status_code}")
+                print(f"Response text: {rsp.text}")  # 打印返回的响应文本
+                assert rsp.status_code == 200, f"上传文件失败，状态码: {rsp.status_code}, 响应内容: {rsp.text}"
+        
+                url = rsp.text  # 假设返回的是文本，保存响应内容为 URL
+
         return url
